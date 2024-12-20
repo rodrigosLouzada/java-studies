@@ -21,11 +21,12 @@ public class Program2 {
 		
 		Product product = new Product(name);
 		
-		System.out.println(product.name + product.price + product.quantity);
+		//System.out.println(product.name + product.price + product.quantity);
+		System.out.println(product.toString());
 		
-		product.addProducts(quantity);
-		product.totalvalue(price, quantity);
-		product.removeProducts(quantity);
+		//product.addProducts(quantity);
+		//product.totalvalue(price, quantity);
+		//product.removeProducts(quantity);
 		
 		scan.close();
 	}
