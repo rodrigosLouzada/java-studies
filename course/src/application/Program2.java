@@ -19,13 +19,13 @@ public class Program2 {
 		System.out.println("digite a quantidade para o seu produto");
 		int quantity = scan.nextInt();
 		
-		Product product = new Product(name);
+		Product product = new Product(name, price, quantity);
 		
 		//System.out.println(product.name + product.price + product.quantity);
-		System.out.println(product.toString());
+		System.out.println("o produto inteiro é :" + product.toString());
 		
 		//product.addProducts(quantity);
-		//product.totalvalue(price, quantity);
+		//System.out.println(product.totalvalue(price, quantity));
 		//product.removeProducts(quantity);
 		
 		scan.close();
