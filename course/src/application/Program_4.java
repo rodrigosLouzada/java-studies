@@ -21,7 +21,7 @@ public class Program_4 {
 		int quantity = sc.nextInt();
 		
 		Product_2 product = new Product_2(name, price, quantity);
-
+		Product_2 prod = new Product_2(name, price);
 		
 		System.out.println("Product data: " + product);
 		System.out.print("Enter the number of products to be added in stock: ");
