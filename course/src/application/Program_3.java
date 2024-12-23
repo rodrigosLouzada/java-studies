@@ -3,6 +3,7 @@ package application;
 import java.util.Scanner;
 
 import util.Calculator;
+import util.Calculator_static;
 
 public class Program_3 {
 	
@@ -17,8 +18,12 @@ public class Program_3 {
 		System.out.println("digite um raio para o resultado");
 		double raio = scan.nextDouble();
 		
-		double circu = cal.circunferencia(raio);
-		double vol = cal.vol(raio);
+		//double circu = cal.circunferencia(raio);
+		//double vol = cal.vol(raio);
+		
+		
+		double circu = Calculator_static.circunferencia(raio);
+		double vol = Calculator_static.vol(raio);
 		
 		System.out.println("valores calculados: " + circu + "  " + vol);
 		
