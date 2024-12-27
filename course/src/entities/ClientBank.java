@@ -17,9 +17,9 @@ public class ClientBank {
 		
 	}
 	
-	private void mostrarDadosCliente() {
-		System.out.println(this.nomeCliente + "  " + this.numeroConta +
-							"  " + this.saldo + "  " );
+	public void mostrarDadosCliente() {
+		System.out.println("nome do cliente: "+ this.nomeCliente + " || N. conta:  " + this.numeroConta +
+							"||Saldo " + this.saldo + "  " );
 	}
 	
 	
@@ -32,7 +32,7 @@ public class ClientBank {
 	
 	public void saque(double valorSacado) {
 		
-		this.saldo -= valorSacado - custodeSaqueInteger;
+		this.saldo -= (valorSacado + custodeSaqueInteger);
 		mostrarDadosCliente();
 	}
 	
