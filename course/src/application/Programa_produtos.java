@@ -10,11 +10,24 @@ public class Programa_produtos {
 
 		Scanner scanner = new Scanner(System.in);
 		
-		int n = scanner.nextInt();
+		System.out.println("qual é o tamanho do seu vetor?");
+		int tamanhoVetor = scanner.nextInt();
 		
-		Produtos[] Vetorprodutos = new Produtos[n]; 
+		Produtos[] Vetorprodutos = new Produtos[tamanhoVetor]; 
 		
 		
+		for(int i = 0; i<tamanhoVetor ; i ++) {
+			
+			System.out.println("digite um nome");
+			String name = scanner.next();
+			
+			System.out.println("digite um numero");
+			double price = scanner.nextDouble();
+			
+			Vetorprodutos[i] = new Produtos(name, price) ;
+			System.out.println("seu nome: " + Vetorprodutos[i].name + " seu preco " + Vetorprodutos[i].price);
+		}		
+			
 		scanner.close();
 	}
 
