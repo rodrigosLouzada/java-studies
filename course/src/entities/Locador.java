@@ -6,7 +6,6 @@ public class Locador {
 	private String[] nome = new String[9];
 	private Integer[] numeroQuarto = new Integer[9];
 	
-	
 	public Locador() {
 		
 	}
@@ -21,5 +20,17 @@ public class Locador {
 		return this.numeroQuarto[numeroQuarto] ;
 	}
 	
-	
+	public void MostrarQquartos() {
+		 
+			for(int i = 0 ; i < 9 ; i ++) {
+				
+				if(numeroQuarto[i] != null) {
+				
+				System.out.println("quarto " + numeroQuarto[i] 
+						+ "está ocupado " + "locador: " + nome[i]
+						+ " email: " + email[i]);
+				
+				}
+			}		
+		}
 }
