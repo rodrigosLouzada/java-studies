@@ -16,10 +16,10 @@ public class Alugueis {
 		
 		if(resposta.equals("SIM")) {
 		
-		
 		do {
 				
 				System.out.println("qual é o seu nome?");
+				scanner.nextLine();
 				String nome = scanner.next();
 				
 				System.out.println("qual é o seu email?");
@@ -44,6 +44,9 @@ public class Alugueis {
 		}else {
 			System.out.println("tenha um bom dia");
 		}
+		
+		System.out.println("os quartos ocupados: ");
+		locador.MostrarQquartos();
+		scanner.close();
 	}
-
 }
