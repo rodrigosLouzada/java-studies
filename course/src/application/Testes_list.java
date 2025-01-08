@@ -40,11 +40,22 @@ public class Testes_list {
 		
 		System.out.println("------------");
 		
-		List<String> result = lista.stream().filter(x -> x.charAt(0) == 'b').collect(Collectors.toList());
+		/* List<String> result = lista.stream().filter(x -> x.charAt(0) == 'b').collect(Collectors.toList());
 		
 		for(String r: result) {
 			System.out.println(r);
+		} */ 
+		// better way:
+		
+		List<String> result = new ArrayList<>();
+		
+		for(String r : lista) {
+			
+			if(r.charAt(0) == 'b') {
+				result.add(r);
+			}
 		}
+		
 		
 		String name = lista.stream().filter(x -> x.charAt(0) == 'b').findFirst().orElse(null);
 	}
