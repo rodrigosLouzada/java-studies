@@ -55,7 +55,10 @@ public class Program_funcionarios {
 			System.out.println("o ID : " + possivelID + "não existe entre os funcionarios");
 		}
 		
-		
+		System.out.println("------seus funcionario e dados são: ------");
+		for(Funcionario funcionario : funcionarios) {
+			funcionario.mostrarFuncinarios();
+		}
 		
 		
 	}
