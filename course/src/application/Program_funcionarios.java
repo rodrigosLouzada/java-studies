@@ -11,21 +11,25 @@ public class Program_funcionarios {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("gostaria de adicionar quantos funcionarios?");
+		System.out.println("gostaria de adicionar quantos funcionarios, quantos?");
 		Integer quatidadeFuncionarios = scanner.nextInt();
+		scanner.nextLine();
+		
 		List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 		
 		
 		for(Integer i = 0 ; i < quatidadeFuncionarios; i ++) {
+			
 			System.out.println("qual é o salario dele?");
 			Double salario = scanner.nextDouble();
-			
+			scanner.nextLine();
 			
 			System.out.println("qual é ID do funcinario?");
 			Integer id = scanner.nextInt();
+			scanner.nextLine();
 			
 			System.out.println("qual é o nome dele?");
-			String nome = scanner.next();
+			String nome = scanner.nextLine();
 			
 			funcionarios.add(new Funcionario(nome, id, salario));
 			
@@ -33,8 +37,9 @@ public class Program_funcionarios {
 			
 		}
 		
+		
 		System.out.println("quer aumentar o salario de alguém, SIM ou NAO?");
-		String resposta = scanner.next();
+		String resposta = scanner.next().toUpperCase();
 		
 		System.out.println("Forneça o ID: ");
 		Integer possivelID = scanner.nextInt(); // talvez mudar o escopo
