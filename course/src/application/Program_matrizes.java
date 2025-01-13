@@ -20,10 +20,24 @@ public class Program_matrizes {
 				System.out.println("um incremento");
 			}
 		}  
-		System.out.println("fim do programa");
+		System.out.println("fim do programa 1");
 		
+		System.out.println("diagonal pricipal: ");
+		for(int i = 0 ; i < n ; i ++) {
+			System.out.print(matri[i][i] + " ");
+		}
+		System.out.println("------------");
 		
-		
+		System.out.println("numeros negativos: ");
+		int numNegativos = 0;
+		for(int i = 0;  i< n ; i ++) {
+			for(int j = 0 ; j < n ; j ++) {
+				if(matri[i][j] < 0) {
+					numNegativos ++;
+				}
+			}
+		}
+		System.out.println(numNegativos);
 	}
 
 }
