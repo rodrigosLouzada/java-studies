@@ -30,18 +30,17 @@ public class Linhas_matrizes {
 		
 		for(int i = 0 ; i < linhas ; i ++) {
 			for(int j = 0 ; j < colunas; j ++) {
-				if(valorEscolhido == matriz[i][j] && i >= 0 && (i + 1) > linhas  && j >= 0 && j > colunas) {
+				if(valorEscolhido == matriz[i][j]){
 					System.out.println("na linha: " + i + " na coluna: " + j);
 				
-					System.out.println("acima: " +  (i>0) ? matriz[i + - 1][j]);
-				
-				
-				
+					System.out.println("acima: " + ((i>0) ? matriz[i  - 1][j] : "nao existe"));
+					System.out.println("abaixo: " + ((i < linhas) ? matriz[i+1][j] : "não existe"));
+					System.out.println("esquerda: " + ((j > 0) ? matriz[i][j -1] : "nao existe" ));
+					System.out.println("direita: " + ((j < colunas) ? matriz[i][j+1] : "nao existe"));
+					
 				}
 			}
-		}
-		
-		
+		}	
 	}
 
 }
