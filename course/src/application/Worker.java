@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import entities.Departament;
@@ -78,6 +79,13 @@ public class Worker {
 	}
 	
 	public Double income(Integer year, Integer Mounth) {
-		return 0.0;
+		
+		Calendar cal = Calendar.getInstance();
+		
+		for(HourContract c : contracts) {
+			//cal.setTime(c.getDate());
+			int c_year = cal.get(Calendar.YEAR);
+			//this.baseSalary += hourContract.getValuePorHour();
+		}
 	}
 }
