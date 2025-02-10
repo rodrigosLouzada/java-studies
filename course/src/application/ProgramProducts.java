@@ -18,8 +18,9 @@ public class ProgramProducts {
 
 		System.out.println("quantos produtos quer cadastrar?");
 		Integer numprodutos = scanner.nextInt();
+		scanner.nextLine();
 		
-		for(int i = 0; i <= numprodutos ; i++) {
+		for(int i = 0; i < numprodutos ; i++) {
 			System.out.println("o produto é do tipo comum/importado/usado ?");
 			String tipoProduto = scanner.nextLine();
 			
@@ -28,6 +29,7 @@ public class ProgramProducts {
 			
 			System.out.println("qual é o valor do produto?");
 			Double price = scanner.nextDouble();
+			scanner.nextLine();
 			
 			if(tipoProduto.toUpperCase().equals("COMUM")) {
 				ProductM produto = new ProductM(name, price);
@@ -37,6 +39,7 @@ public class ProgramProducts {
 				
 				System.out.println("qual é a taxa extra?");
 				Double customsFee = scanner.nextDouble();
+				scanner.nextLine();
 				ProductM produto = new ImportedProduct(name, price, customsFee);
 				listProducts.add(produto);
 								
@@ -56,7 +59,13 @@ public class ProgramProducts {
 		System.out.println("PRICE TAGS:");
 		for(ProductM product: listProducts) {
 			System.out.println( "produto Nome:"+ product.getName() 
-			+ "produto preço: " + product.getPrice() + product.get);
+			+ "produto preço: " + product.getPrice());
+		
+			if(product instanceof UsedProduct) {
+				UsedProduct used = (UsedProduct) product;
+				System.out.println("produto Nome:"+ used.getName() 
+			+ "produto preço: " + used.getPrice() + "data: " + used.getManufactureDate());
+			}
 		}
 	}
 
