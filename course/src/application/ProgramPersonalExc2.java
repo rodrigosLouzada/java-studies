@@ -47,6 +47,8 @@ public class ProgramPersonalExc2 {
 		}
 		catch (DomainException e) {
 			System.out.println("error in reservation: " + e.getMessage());
+		}catch (RuntimeException e) {
+			System.out.println(" unexpected error");
 		}
 
 		scanner.close();
